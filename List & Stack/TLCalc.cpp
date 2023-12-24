@@ -47,30 +47,6 @@ double TLCalc::CalcPostfix() {
 	return res;
 }
 
-void TLCalc::ToPostfix() {
-	C.Clear();
-	string str = "(" + infix + ")";
-	for (int i = 0; i < str.length(); i++) {
-		if (str[i] == '(')
-			C.Push('(');
-		else if ((str[i] >= '0') && (str[i] <= '9'))
-			postfix += str[i];
-		if (str[i] == ')') {
-			char el = C.Pop();
-			while (el != '(') {
-				postfix += el;
-				el = C.Pop();
-			}
-			if ((str[i] == '+') || (str[i] == '-') || (str[i] == '*') || (str[i] == '/') || (str[i] == '^')) {
-				char el = C.Pop();
-				while (Prior(el) >= Prior(str[i])) {
-					postfix += el;
-					el = C.Pop();
-				}
-			}
-		}
-	}
-}
 
 double TLCalc::Calc() {
 	C.Clear(); D.Clear();

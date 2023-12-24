@@ -2,6 +2,8 @@
 
 #include "gtest.h"
 
+
+
 TEST(TLCalc, can_create_calc_with_right_infix)
 {
 	TLCalc calc("2+2");
@@ -9,7 +11,7 @@ TEST(TLCalc, can_create_calc_with_right_infix)
 	EXPECT_EQ(1, str == calc.GetInfix());
 }
 
-TEST(TLCalc, can_set_infix)
+TEST(TLCalc, can_SetInfix)
 {
 	TLCalc calc("3-3");
 	std::string str = "2+2";
@@ -48,17 +50,17 @@ TEST(TLCalc, can_pow)
 }
 
 
-//TEST(TLCalc, can_correctly_calculate_no_postfix)
-//{
-//	TLCalc calc("2^2+2*3-(1+2/2)");
-//	EXPECT_EQ(8, calc.Calc());
-//}
+TEST(TLCalc, can_correctly_calculate_no_postfix)
+{
+	TLCalc calc("2^2+2*3-(1+2/2)");
+	EXPECT_EQ(8, calc.Calc());
+}
 
-//TEST(TLCalc, can_correctly_calculate_long)
-//{
-//	TLCalc calc("(2^2+2*3-(1+2/2)-100-(32-22))^2-0.1");
-//	EXPECT_EQ(10403.9, calc.Calc());
-//}
+TEST(TLCalc, can_correctly_calculate_long)
+{
+	TLCalc calc("(2^2+2*3-(1+2/2)-100-(32-22))^2-0.1");
+	EXPECT_EQ(10403.9, calc.Calc());
+}
 
 
 

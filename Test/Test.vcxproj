@@ -127,9 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\List &amp; Stack\TLCalc.h" />
+    <ClInclude Include="..\List &amp; Stack\TLStack.h" />
     <ClInclude Include="gtest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\List &amp; Stack\TLCalc.cpp" />
     <ClCompile Include="gtest-all.cc" />
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="test_tlcalc.cpp" />

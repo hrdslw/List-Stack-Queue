@@ -24,7 +24,9 @@ public:
 	}
 
 	
-	T Pop() {                                     //пуш ругается сука пидор
+	T Pop() {              
+		if (IsEmpty())
+			throw("Stack is empty");
 		TNode<T>* p = pFirst;
 		pFirst = pFirst->pNext;
 		T res = p->val;
