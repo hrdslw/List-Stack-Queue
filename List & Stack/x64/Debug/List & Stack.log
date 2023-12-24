@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (List & Stack.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  main.cpp
+C:\Git\List & Stack & Queue\List & Stack\TCalc.h(21): warning C4715: TCalc::Prior: значение возвращается не при всех путях выполнения
+  List & Stack.vcxproj -> C:\Git\List & Stack & Queue\x64\Debug\List & Stack & Queue.exe

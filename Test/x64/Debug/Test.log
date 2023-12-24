@@ -1,0 +1,33 @@
+﻿  test_tlcalc.cpp
+C:\Git\List & Stack & Queue\Test\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+C:\Git\List & Stack & Queue\Test\gtest.h(55,1): message : "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING" ранее объявлен в командной строке
+C:\Git\List & Stack & Queue\Test\gtest.h(18864,19): warning C4805: ==: небезопасное смешение типа "const T1" и типа "const T2" в операции
+          with
+          [
+              T1=int
+          ]
+          and
+          [
+              T2=bool
+          ]
+C:\Git\List & Stack & Queue\Test\gtest.h(18901,1): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::CmpHelperEQ<T1,T2>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Git\List & Stack & Queue\Test\test_tlcalc.cpp(9): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Git\List & Stack & Queue\Test\test_tlcalc.cpp(9,2): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Git\List & Stack & Queue\List & Stack\TLCalc.h(21): warning C4715: TLCalc::Prior: значение возвращается не при всех путях выполнения
+test_tlcalc.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: double __cdecl TLCalc::Calc(void)" (?Calc@TLCalc@@QEAANXZ) в функции "private: virtual void __cdecl TLCalc_can_div_Test::TestBody(void)" (?TestBody@TLCalc_can_div_Test@@EEAAXXZ).
+C:\Git\List & Stack & Queue\x64\Debug\Test.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
