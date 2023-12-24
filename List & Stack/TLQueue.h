@@ -14,6 +14,10 @@ class TLQueue
 	TNode<T>* pFirst, * pLast;                //if pFirst == nullptr -> Queue is empty
 	
 public:
+	TLQueue() {
+		pFirst = nullptr;
+		pLast = nullptr;
+	}
 
 	TLQueue(const TLQueue<T>& q) {            // costuctor - copy
 		TNode<T>* tmp = q.pFirst;
@@ -33,6 +37,15 @@ public:
 		}
 	}
 
+	void Clear()
+	{
+		while (!IsEmpty())
+		{
+			Pop();
+		}
+		pFirst = nullptr;
+		pLast = nullptr;
+	}
 	bool IsFull() {
 		TNode<T>* p = new TNode<T>;
 		bool res = p == nullptr;
@@ -51,7 +64,7 @@ public:
 		TNode<T>* tmp = new TNode<T>;
 		tmp->val = el;
 		tmp->pNext = nullptr;
-		if (!this->IsEmpty()) 
+		if (this->IsEmpty()) 
 			pFirst = pLast = tmp;
 		else
 		{
@@ -73,4 +86,73 @@ public:
 			return res;
 		}
 	}
+
+
+	T Front()
+	{
+		if (IsEmpty())
+		{
+			throw "IsEmpty.";
+		}
+		return pFirst->val;
+	}
+
+
+	T Back()
+	{
+		if (IsEmpty())
+		{
+			throw "IsEmpty";
+		}
+		return pLast->val;
+	}
+
+	TLQueue<T>& operator=(const TLQueue<T>& q)
+	{
+		if (q.pFirst == nullptr)
+		{
+			Clear();
+		}
+		else
+		{
+			Clear();
+			TNode<T>* tmp = q.pFirst, * current;
+			while (tmp != nullptr)
+			{
+				current = new TNode<T>;
+				current->val = tmp->val;
+				if (pFirst == nullptr)
+				{
+					pFirst = current;
+					pLast = current;
+				}
+				else
+				{
+					pLast->pNext = current;
+					pLast = current;
+				}
+				tmp = tmp->pNext;
+			}
+		}
+		return *this;
+	}
+
+	
+	/*bool operator==(const TLQueue<T>& q)
+	{
+		TNode<T>* pRight = q.pFirst, * pLeft = pFirst;
+		while (pRight != nullptr || pLeft != nullptr) {
+			if (pRight->val != pLeft->val) {
+				return false;
+			}
+			pRight = pRight->pNext;
+			pLeft = pLeft->pNext;
+		}
+		if ((pRight == nullptr && pLeft != nullptr)
+			|| (pLeft == nullptr && pRight != nullptr)) {
+			return false;
+		}
+		return true;
+
+	}*/
 };

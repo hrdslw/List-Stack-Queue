@@ -14,7 +14,6 @@ public:
 	TLStack() {
 		this->pFirst = 0;
 	}
-
 	
 	void Push(const T el) {
 		TNode<T>* tmp = new TNode<T>;

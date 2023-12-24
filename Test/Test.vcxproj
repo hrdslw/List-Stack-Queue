@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\List &amp; Stack\TLCalc.h" />
+    <ClInclude Include="..\List &amp; Stack\TLQueue.h" />
     <ClInclude Include="..\List &amp; Stack\TLStack.h" />
     <ClInclude Include="gtest.h" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClCompile Include="gtest-all.cc" />
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="test_tlcalc.cpp" />
+    <ClCompile Include="test_tlqueue.cpp" />
     <ClCompile Include="test_tlstack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
